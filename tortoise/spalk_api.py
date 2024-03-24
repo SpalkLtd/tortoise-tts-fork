@@ -4,7 +4,7 @@ import glob
 
 
 if __name__ == '__main__':
-    audio_folder = './voices/spalk_horse_game'
+    audio_folder = 'tortoise/voices/spalk_horse_game'
     clips_paths = glob.glob(f'{audio_folder}/*.wav')
 
     reference_clips = [utils.audio.load_audio(p, 22050) for p in clips_paths]
