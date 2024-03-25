@@ -32,7 +32,7 @@ def generate_audio():
         output_path = 'results/result.wav'
         with open(output_path, "rb") as audio_file:
             audio_data = audio_file.read()
-        audio_data_base64 = base64.b64encode(audio_data)
+        audio_data_base64 = base64.b64encode(audio_data).decode('utf-8')
 
         return jsonify({"message": "Audio generated successfully!", "WavAudioBase64" : audio_data_base64, "SampleRate": 24000}), 200
     else:
